@@ -1,6 +1,6 @@
 # Xiaoqi Wang (王筱淇) — Personal website
 
-Live site: https://yolandalalala.github.io/
+Live site: https://xiaoqiwang-ai.github.io/
 
 ## Update the website
 

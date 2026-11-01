@@ -64,8 +64,8 @@ const petLightbox=d.pets?.length?`<dialog class="pet-lightbox" id="pet-lightbox"
 const html=`<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Xiaoqi Wang | Research Scientist</title><meta name="description" content="Xiaoqi Wang — Staff Research Scientist at Bosch AI Research Center. Vision foundation models, HD map generation, generative world models, and predictive spatial reasoning.">
-<meta name="author" content="Xiaoqi Wang"><meta name="theme-color" content="#f1f5f9"><link rel="canonical" href="https://yolandalalala.github.io/">
-<meta property="og:title" content="Xiaoqi Wang | Research Scientist"><meta property="og:description" content="Vision foundation models and autonomous driving. Research, publications, and experience."><meta property="og:type" content="website"><meta property="og:url" content="https://yolandalalala.github.io/">
+<meta name="author" content="Xiaoqi Wang"><meta name="theme-color" content="#f1f5f9"><link rel="canonical" href="https://xiaoqiwang-ai.github.io/">
+<meta property="og:title" content="Xiaoqi Wang | Research Scientist"><meta property="og:description" content="Vision foundation models and autonomous driving. Research, publications, and experience."><meta property="og:type" content="website"><meta property="og:url" content="https://xiaoqiwang-ai.github.io/">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/academic.css"><link rel="stylesheet" href="/assets/theme.css"><link rel="stylesheet" href="/assets/fonts.css"><link rel="stylesheet" href="/assets/site.css?v=20261101-6"><link rel="stylesheet" href="/assets/results.css">
 <script>try{if(localStorage.getItem('xiaoqi-theme')==='dark')document.documentElement.classList.add('dark')}catch{}</script>
 </head><body><a class="skip-link" href="#main">Skip to content</a>
