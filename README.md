@@ -8,7 +8,7 @@ Live site: https://yolandalalala.github.io/
 - Edit `results.json` for paper result charts.
 - Edit `build.mjs` for page structure.
 - Styling and interactive behavior live in `dist/assets/`.
-- Replace `dist/uploads/Xiaoqi_Wang_CV_Nov_2026.pdf` in place to update the CV.
+- CV download links appear only when `dist/uploads/Xiaoqi_Wang_CV_Nov_2026.pdf` is present. Add or replace this file only when approved for public distribution.
 
 Run `node build.mjs` to build locally. Serve `dist/` with a static HTTP server to preview. Every push to `main` automatically builds and publishes the site through GitHub Pages.
 
