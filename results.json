@@ -1,0 +1,1414 @@
+{
+  "topoenhance": {
+    "source": "https://arxiv.org/pdf/2610.11058#page=9",
+    "table": "Table 2 · p. 9",
+    "note": "OpenLane-V2 discrete topology connectivity. One enhancer per dataset is applied to all listed detectors without detector-specific retraining. The oracle upper bounds are not plotted.",
+    "columns": [
+      "TJS lane–lane before",
+      "TJS lane–lane after",
+      "TJS lane–traffic before",
+      "TJS lane–traffic after"
+    ],
+    "datasets": {
+      "Argoverse2": [
+        [
+          "TopoNet",
+          16.3,
+          32.9,
+          31.0,
+          55.8
+        ],
+        [
+          "TopoMLP",
+          18.5,
+          59.7,
+          31.5,
+          59.8
+        ],
+        [
+          "Topo2D",
+          18.9,
+          55.0,
+          34.5,
+          51.5
+        ],
+        [
+          "TopoLogic",
+          21.0,
+          43.9,
+          32.5,
+          53.3
+        ],
+        [
+          "SMART",
+          38.1,
+          87.7,
+          36.6,
+          82.8
+        ]
+      ],
+      "nuScenes": [
+        [
+          "TopoNet",
+          9.0,
+          42.3,
+          35.6,
+          56.8
+        ],
+        [
+          "TopoMLP",
+          15.9,
+          51.3,
+          29.3,
+          62.6
+        ]
+      ]
+    }
+  },
+  "mapmergellm": {
+    "source": "https://arxiv.org/pdf/2610.02513#page=8",
+    "table": "Table 1 · p. 8",
+    "note": "F1 (%) is averaged over matching thresholds of 0.5, 1.0, and 1.5 meters. Each comparison uses the same upstream detector's local predictions.",
+    "methods": [
+      "VMA",
+      "MonoLaM",
+      "MapMergeLLM"
+    ],
+    "columns": [
+      "Lane divider F1",
+      "Road boundary F1"
+    ],
+    "datasets": {
+      "Argoverse2": {
+        "MapTracker": [
+          [
+            33.0,
+            13.6
+          ],
+          [
+            50.5,
+            33.8
+          ],
+          [
+            51.4,
+            41.9
+          ]
+        ],
+        "StreamMapNet": [
+          [
+            37.4,
+            17.5
+          ],
+          [
+            66.6,
+            38.6
+          ],
+          [
+            72.4,
+            47.2
+          ]
+        ]
+      },
+      "nuScenes": {
+        "MapTracker": [
+          [
+            75.0,
+            23.0
+          ],
+          [
+            74.7,
+            36.5
+          ],
+          [
+            78.2,
+            45.5
+          ]
+        ],
+        "StreamMapNet": [
+          [
+            59.1,
+            18.7
+          ],
+          [
+            68.0,
+            33.0
+          ],
+          [
+            70.9,
+            39.3
+          ]
+        ]
+      }
+    }
+  },
+  "use": {
+    "source": "https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_USE_Universal_Segment_Embeddings_for_Open-Vocabulary_Image_Segmentation_CVPR_2024_paper.pdf#page=7",
+    "table": "Table 2 · p. 7",
+    "columns": [
+      "ADE-150",
+      "ADE-847",
+      "PC-59",
+      "PC-459",
+      "Average"
+    ],
+    "note": "Mean IoU (%) on open-vocabulary semantic segmentation. COCO† uses all segment–text pairs from COCO images, including annotations from Visual Genome. The COCO + VG variant additionally uses Visual Genome images. CLIP-based two-stage methods use ViT-L/14; the all-methods view includes different architectures.",
+    "baselines": [
+      {
+        "name": "LSeg+",
+        "type": "end-to-end",
+        "values": [
+          18.0,
+          3.8,
+          46.5,
+          7.8,
+          19.0
+        ]
+      },
+      {
+        "name": "ZegFormer",
+        "type": "end-to-end",
+        "values": [
+          16.4,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "name": "OpenSeg",
+        "type": "end-to-end",
+        "values": [
+          28.6,
+          8.8,
+          48.2,
+          12.2,
+          24.4
+        ]
+      },
+      {
+        "name": "ODISE",
+        "type": "end-to-end",
+        "values": [
+          29.9,
+          11.1,
+          57.3,
+          14.5,
+          28.2
+        ]
+      },
+      {
+        "name": "SAN",
+        "type": "end-to-end",
+        "values": [
+          32.1,
+          12.4,
+          57.7,
+          15.7,
+          29.4
+        ]
+      },
+      {
+        "name": "SimSeg",
+        "type": "two-stage",
+        "values": [
+          21.7,
+          7.1,
+          52.2,
+          10.2,
+          22.8
+        ]
+      },
+      {
+        "name": "OVSeg",
+        "type": "two-stage",
+        "values": [
+          29.6,
+          9.0,
+          55.7,
+          12.4,
+          26.6
+        ]
+      },
+      {
+        "name": "OVSeg + SAM",
+        "type": "two-stage",
+        "values": [
+          27.5,
+          8.8,
+          51.2,
+          12.3,
+          24.9
+        ]
+      }
+    ],
+    "variants": {
+      "COCO†": [
+        37.0,
+        13.3,
+        57.8,
+        14.7,
+        30.7
+      ],
+      "COCO + VG": [
+        37.1,
+        13.4,
+        58.0,
+        15.0,
+        30.9
+      ]
+    }
+  },
+  "prosam": {
+    "source": "https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_ProSAM_Enhancing_the_Robustness_of_SAM-based_Visual_Reference_Segmentation_with_ICCV_2025_paper.pdf",
+    "tables": {
+      "Reference types": "Table 1 · p. 5",
+      "One-shot methods": "Table 2 · p. 6"
+    },
+    "note": "Mean IoU (%) averaged over four evaluation folds on novel categories. Reference-type comparisons use the same ResNet-50 setting for VRP-SAM and ProSAM. In the one-shot comparison, DCAMA uses Swin-B; the other listed methods use ResNet-50.",
+    "prompts": [
+      "Point",
+      "Scribble",
+      "Box",
+      "Mask"
+    ],
+    "reference": {
+      "COCO-20i": {
+        "VRP-SAM": [
+          39.85,
+          48.08,
+          49.93,
+          53.28
+        ],
+        "ProSAM": [
+          40.64,
+          49.54,
+          50.93,
+          54.63
+        ]
+      },
+      "PASCAL-5i": {
+        "VRP-SAM": [
+          63.35,
+          67.44,
+          68.75,
+          71.14
+        ],
+        "ProSAM": [
+          64.08,
+          68.52,
+          69.76,
+          72.04
+        ]
+      }
+    },
+    "oneShot": [
+      [
+        "PFENet",
+        35.8,
+        60.8
+      ],
+      [
+        "HSNet",
+        39.2,
+        64.0
+      ],
+      [
+        "CyCTR",
+        40.3,
+        64.0
+      ],
+      [
+        "SSP",
+        37.4,
+        61.4
+      ],
+      [
+        "NTRENet",
+        39.3,
+        64.2
+      ],
+      [
+        "DPCN",
+        43.0,
+        66.7
+      ],
+      [
+        "VAT",
+        41.3,
+        65.5
+      ],
+      [
+        "BAM",
+        45.2,
+        67.8
+      ],
+      [
+        "HDMNet",
+        50.0,
+        69.4
+      ],
+      [
+        "DCAMA",
+        50.9,
+        69.3
+      ],
+      [
+        "ProSAM",
+        54.63,
+        72.04
+      ]
+    ]
+  },
+  "spatialmind": {
+    "source": "https://arxiv.org/pdf/2610.04139#page=7",
+    "table": "Table 1 · p. 7",
+    "note": "SpatialMind-2K evaluation. Models receive only the observed video prefix for future tasks. Direction and relation use accuracy; distance uses mean relative accuracy (MRA). The SFT baseline shares the same backbone and training data. Overall combines all eight tasks.",
+    "columns": [
+      "Overall",
+      "Future direction",
+      "Future distance",
+      "Future relation"
+    ],
+    "rows": [
+      [
+        "GPT-5.6 Luna",
+        "API models",
+        22.6,
+        27.27,
+        14.04,
+        25.61
+      ],
+      [
+        "Claude Sonnet 5",
+        "API models",
+        27.8,
+        30.07,
+        23.51,
+        44.21
+      ],
+      [
+        "Gemini 3.8 Flash",
+        "API models",
+        30.19,
+        20.28,
+        41.34,
+        22.91
+      ],
+      [
+        "GPT-6-Astra (medium)",
+        "API models",
+        39.0,
+        39.86,
+        29.12,
+        52.28
+      ],
+      [
+        "Qwen2.5-VL-3B",
+        "General-purpose",
+        14.4,
+        28.7,
+        17.85,
+        13.0
+      ],
+      [
+        "Qwen3.5-9B",
+        "General-purpose",
+        10.3,
+        4.2,
+        20.35,
+        8.05
+      ],
+      [
+        "LLaVA-NeXT-7B",
+        "General-purpose",
+        14.4,
+        31.5,
+        15.05,
+        18.6
+      ],
+      [
+        "Qwen2.5-VL-7B",
+        "General-purpose",
+        17.6,
+        25.9,
+        10.15,
+        27.7
+      ],
+      [
+        "Cosmos3-8B",
+        "General-purpose",
+        18.95,
+        32.2,
+        3.9,
+        43.2
+      ],
+      [
+        "Qwen3-VL-8B",
+        "General-purpose",
+        20.2,
+        24.5,
+        21.0,
+        34.7
+      ],
+      [
+        "SR-3D-8B",
+        "Spatially specialized",
+        9.6,
+        14.7,
+        8.75,
+        3.5
+      ],
+      [
+        "SpatialRGPT-8B",
+        "Spatially specialized",
+        9.7,
+        34.3,
+        3.85,
+        10.2
+      ],
+      [
+        "SpatialBot-3B",
+        "Spatially specialized",
+        11.8,
+        28.7,
+        2.8,
+        13.0
+      ],
+      [
+        "VLM-3R-7B",
+        "Spatially specialized",
+        14.0,
+        29.4,
+        2.45,
+        32.65
+      ],
+      [
+        "SpaceR-7B",
+        "Spatially specialized",
+        14.7,
+        21.7,
+        3.5,
+        22.45
+      ],
+      [
+        "ViLaSR-7B",
+        "Spatially specialized",
+        14.8,
+        16.8,
+        6.0,
+        30.15
+      ],
+      [
+        "SR-ReaL-8B",
+        "Spatially specialized",
+        14.9,
+        32.2,
+        7.05,
+        16.15
+      ],
+      [
+        "4D-RGPT-8B",
+        "Spatially specialized",
+        15.4,
+        27.3,
+        12.25,
+        16.15
+      ],
+      [
+        "SpatialReasoner-7B",
+        "Spatially specialized",
+        15.8,
+        30.1,
+        8.4,
+        27.0
+      ],
+      [
+        "Qwen3-VL-8B + SFT",
+        "Same-data SFT",
+        45.7,
+        57.34,
+        40.64,
+        57.89
+      ],
+      [
+        "SpatialMind",
+        "Ours",
+        52.65,
+        65.13,
+        42.89,
+        64.48
+      ]
+    ]
+  },
+  "reactdrive": {
+    "source": null,
+    "table": "Submitted manuscript · Table 1 · p. 6",
+    "note": "500 evaluation clips per dataset. Traffic overlap is the detector-based CR proxy, not a physical collision rate. Overall edited-trajectory results average five maneuvers equally. Agent errors use normalized image coordinates under recorded ego trajectories; ego errors assess adherence to edited trajectories. Values are from the supplied CVPR 2027 submission.",
+    "columns": [
+      "Traffic overlap",
+      "Video FVD",
+      "Agent ADE",
+      "Agent FDE",
+      "Ego ADE",
+      "Ego FDE",
+      "Image FID"
+    ],
+    "methods": [
+      "Vista",
+      "GEM",
+      "Epona",
+      "DrivingWorld",
+      "Cosmos3",
+      "ReactDrive"
+    ],
+    "datasets": {
+      "Waymo": [
+        [
+          2.14,
+          42.78,
+          2.09,
+          5.23,
+          21.78,
+          40.07,
+          47.53
+        ],
+        [
+          0.87,
+          12.99,
+          1.58,
+          4.08,
+          10.32,
+          21.14,
+          24.55
+        ],
+        [
+          3.06,
+          15.38,
+          1.88,
+          5.72,
+          12.17,
+          20.49,
+          30.71
+        ],
+        [
+          1.89,
+          13.67,
+          1.6,
+          4.2,
+          10.59,
+          21.15,
+          29.31
+        ],
+        [
+          0.47,
+          9.91,
+          1.14,
+          2.58,
+          2.37,
+          4.64,
+          23.11
+        ],
+        [
+          0.26,
+          7.3,
+          1.03,
+          2.2,
+          1.86,
+          3.49,
+          23.64
+        ]
+      ],
+      "nuPlan": [
+        [
+          0.63,
+          48.66,
+          1.47,
+          2.48,
+          18.61,
+          34.76,
+          39.78
+        ],
+        [
+          0.41,
+          14.3,
+          1.39,
+          2.23,
+          7.11,
+          14.13,
+          30.13
+        ],
+        [
+          3.1,
+          9.64,
+          1.47,
+          4.43,
+          8.38,
+          16.29,
+          33.58
+        ],
+        [
+          1.2,
+          23.54,
+          2.07,
+          4.6,
+          12.06,
+          23.92,
+          47.16
+        ],
+        [
+          0.53,
+          8.66,
+          0.98,
+          1.48,
+          2.78,
+          5.29,
+          20.54
+        ],
+        [
+          0.09,
+          6.93,
+          0.73,
+          1.22,
+          2.21,
+          3.91,
+          21.82
+        ]
+      ]
+    }
+  },
+  "gnninterpreter": {
+    "source": "https://openreview.net/pdf?id=rqq6Dh8t4d#page=7",
+    "table": "Table 2 · p. 7",
+    "pdf_page": 7,
+    "probability_units": "Probability (0–1); multiply by 100 only if explicitly labeling percent",
+    "probability_direction": "Higher target-class probability is better; not classification accuracy",
+    "probability_note": "Mean ± standard deviation of target-class probabilities across 1,000 generated explanation graphs per class. XGNN comparison is reported only for MUTAG.",
+    "time_units": "seconds",
+    "time_direction": "Lower is better",
+    "time_note": "Average explanation-model training time per class over 100 independently trained models; not classifier training or inference latency.",
+    "datasets": {
+      "MUTAG": {
+        "classes": [
+          "Mutagen",
+          "Nonmutagen"
+        ],
+        "GNNInterpreter": {
+          "means": [
+            1,
+            1
+          ],
+          "std": [
+            0,
+            0
+          ],
+          "seconds": 12
+        },
+        "XGNN": {
+          "means": [
+            0.986,
+            0.991
+          ],
+          "std": [
+            0.057,
+            0.083
+          ],
+          "seconds": 128
+        }
+      },
+      "Cyclicity": {
+        "classes": [
+          "Red Cyclic",
+          "Green Cyclic",
+          "Acyclic"
+        ],
+        "GNNInterpreter": {
+          "means": [
+            1,
+            1,
+            1
+          ],
+          "std": [
+            0,
+            0,
+            0
+          ],
+          "seconds": 49
+        }
+      },
+      "Motif": {
+        "classes": [
+          "House",
+          "House-X",
+          "Complete-4",
+          "Complete-5"
+        ],
+        "GNNInterpreter": {
+          "means": [
+            0.918,
+            0.999,
+            1,
+            0.998
+          ],
+          "std": [
+            0.268,
+            0.032,
+            0,
+            0.045
+          ],
+          "seconds": 83
+        }
+      },
+      "Shape": {
+        "classes": [
+          "Lollipop",
+          "Wheel",
+          "Grid",
+          "Star"
+        ],
+        "GNNInterpreter": {
+          "means": [
+            0.742,
+            0.989,
+            0.996,
+            1
+          ],
+          "std": [
+            0.36,
+            0.1,
+            0.032,
+            0
+          ],
+          "seconds": 24
+        }
+      }
+    },
+    "caveats": [
+      "Do not invent XGNN values for the three synthetic datasets. XGNN cannot generate edge features for Cyclicity; authors did not obtain acceptable results for Motif/Shape.",
+      "Table 2 omits the Others class for Motif and Shape; preserve the table scope.",
+      "100% target-class probability is confidence on generated explanation graphs, not ground-truth classification accuracy or perfect explanation fidelity."
+    ]
+  },
+  "gnnboundary": {
+    "source": "https://openreview.net/pdf?id=WIzzXCVYiH#page=8",
+    "table": "Table 1 · p. 8",
+    "pdf_page": 8,
+    "units": "Probability (0–1); multiply by 100 only if explicitly labeling percent",
+    "direction": "Closer to 0.5 for BOTH target classes is desired, not higher is better",
+    "note": "Mean ± standard deviation over 500 generated near-boundary graphs per adjacent class pair. Near-boundary criterion: each target-class probability between 0.45 and 0.55. Baseline joins a random graph from each target class with a random edge. These are model output probabilities, not accuracy.",
+    "columns": [
+      "c1",
+      "c2",
+      "ours_p1",
+      "ours_sd1",
+      "ours_p2",
+      "ours_sd2",
+      "baseline_p1",
+      "baseline_sd1",
+      "baseline_p2",
+      "baseline_sd2",
+      "complexity"
+    ],
+    "datasets": {
+      "Motif": [
+        [
+          "House",
+          "House-X",
+          0.501,
+          0.028,
+          0.499,
+          0.028,
+          0.041,
+          0.136,
+          0.949,
+          0.145,
+          6.55e-08
+        ],
+        [
+          "House",
+          "Complete-4",
+          0.498,
+          0.028,
+          0.501,
+          0.028,
+          0.279,
+          0.278,
+          0.717,
+          0.285,
+          6.55e-08
+        ],
+        [
+          "House-X",
+          "Complete-5",
+          0.491,
+          0.026,
+          0.509,
+          0.026,
+          0.007,
+          0.049,
+          0.993,
+          0.049,
+          2.57e-07
+        ]
+      ],
+      "Collab": [
+        [
+          "HE",
+          "CM",
+          0.473,
+          0.015,
+          0.487,
+          0.016,
+          0.835,
+          0.327,
+          0.153,
+          0.318,
+          0.0463
+        ],
+        [
+          "HE",
+          "Astro",
+          0.526,
+          0.013,
+          0.466,
+          0.013,
+          0.364,
+          0.462,
+          0.631,
+          0.465,
+          0.0246
+        ]
+      ],
+      "Enzymes": [
+        [
+          "EC1",
+          "EC4",
+          0.489,
+          0.023,
+          0.487,
+          0.021,
+          0.249,
+          0.368,
+          0.219,
+          0.365,
+          0.0754
+        ],
+        [
+          "EC1",
+          "EC5",
+          0.492,
+          0.023,
+          0.489,
+          0.025,
+          0.242,
+          0.365,
+          0.36,
+          0.43,
+          0.1413
+        ],
+        [
+          "EC1",
+          "EC6",
+          0.485,
+          0.028,
+          0.472,
+          0.017,
+          0.225,
+          0.351,
+          0.245,
+          0.358,
+          0.1492
+        ],
+        [
+          "EC2",
+          "EC3",
+          0.488,
+          0.025,
+          0.488,
+          0.025,
+          0.148,
+          0.29,
+          0.239,
+          0.363,
+          0.2325
+        ],
+        [
+          "EC4",
+          "EC5",
+          0.48,
+          0.024,
+          0.486,
+          0.024,
+          0.268,
+          0.381,
+          0.351,
+          0.419,
+          0.1363
+        ],
+        [
+          "EC5",
+          "EC6",
+          0.481,
+          0.022,
+          0.486,
+          0.023,
+          0.391,
+          0.432,
+          0.269,
+          0.368,
+          0.212
+        ]
+      ]
+    },
+    "caveats": [
+      "p(c1) + p(c2) can sum below 1 because there are other classes. Do not renormalize.",
+      "Complexity is a descriptive learned-boundary measure, not a method accuracy or improvement metric.",
+      "If drawing ±SD whiskers on a 0–1/0–100 axis, mean ± SD can exceed bounds; state if clipping visually."
+    ]
+  },
+  "deepgd": {
+    "source": "https://arxiv.org/pdf/2106.15347#page=6",
+    "table": "Table 1 · p. 6",
+    "metric": "Average stress",
+    "better": "lower",
+    "precision": 2,
+    "rows": [
+      [
+        "DeepGD · random init",
+        246.57
+      ],
+      [
+        "DeepGD · PivotMDS init",
+        239.73
+      ],
+      [
+        "Graphviz",
+        251.93
+      ],
+      [
+        "PivotMDS",
+        372.06
+      ],
+      [
+        "GNN + t-SNE",
+        483.01
+      ],
+      [
+        "GNN + UMAP",
+        379.88
+      ]
+    ],
+    "spc": [
+      [
+        "DeepGD · random init",
+        1.1
+      ],
+      [
+        "DeepGD · PivotMDS init",
+        -5.43
+      ],
+      [
+        "Graphviz",
+        0
+      ],
+      [
+        "PivotMDS",
+        36.53
+      ],
+      [
+        "GNN + t-SNE",
+        56.98
+      ],
+      [
+        "GNN + UMAP",
+        41.4
+      ]
+    ],
+    "note": "Stress-only optimization, averaged over 1,000 held-out Rome graphs (10–100 nodes). Lower stress is better. Stress is not a percentage; SPC is the mean per-graph symmetric percent change relative to Graphviz, not the percent change between aggregate mean stresses.",
+    "multiaesthetic": {
+      "source": "https://arxiv.org/pdf/2106.15347#page=7",
+      "table": "Table 2 · p. 7",
+      "columns": [
+        "Stress",
+        "Minimum-angle loss",
+        "Edge-length variation",
+        "Node-occlusion loss",
+        "t-SNE loss"
+      ],
+      "rows": [
+        {
+          "setting": "Stress + minimum angle",
+          "weights": [
+            0.6,
+            0.4,
+            0,
+            0,
+            0
+          ],
+          "random": [
+            17.59,
+            -17.1,
+            null,
+            null,
+            null
+          ],
+          "pivotMDS": [
+            4.24,
+            -22.66,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "setting": "Stress + edge length",
+          "weights": [
+            0.8,
+            0,
+            0.2,
+            0,
+            0
+          ],
+          "random": [
+            4.88,
+            null,
+            -20.28,
+            null,
+            null
+          ],
+          "pivotMDS": [
+            4.64,
+            null,
+            -32.92,
+            null,
+            null
+          ]
+        },
+        {
+          "setting": "Stress + node occlusion",
+          "weights": [
+            0.6,
+            0,
+            0,
+            0.4,
+            0
+          ],
+          "random": [
+            0.72,
+            null,
+            null,
+            3.01,
+            null
+          ],
+          "pivotMDS": [
+            -4.67,
+            null,
+            null,
+            -2.7,
+            null
+          ]
+        },
+        {
+          "setting": "Stress + t-SNE",
+          "weights": [
+            0.7,
+            0,
+            0,
+            0,
+            0.3
+          ],
+          "random": [
+            1.88,
+            null,
+            null,
+            null,
+            -5.18
+          ],
+          "pivotMDS": [
+            -3.84,
+            null,
+            null,
+            null,
+            -12.09
+          ]
+        },
+        {
+          "setting": "Four aesthetics",
+          "weights": [
+            0.5,
+            0.1,
+            0,
+            0.1,
+            0.3
+          ],
+          "random": [
+            4.19,
+            -0.6,
+            null,
+            0.76,
+            -7.29
+          ],
+          "pivotMDS": [
+            -1.53,
+            -7.36,
+            null,
+            -2.09,
+            -14.48
+          ]
+        }
+      ],
+      "note": "Signed SPC (%) relative to Graphviz. Negative is better. Dashes mean not reported/not optimized, never zero. Each row is a distinct trained model; do not present different rows as the same model."
+    }
+  },
+  "smartgd": {
+    "source": "https://arxiv.org/pdf/2206.06434v3#page=8",
+    "table": "Figure 4 · p. 8 (main results table)",
+    "columns": [
+      "Stress",
+      "Edge crossings",
+      "Crossing-angle loss",
+      "Incident-angle loss",
+      "Edge-length uniformity loss",
+      "Node-occlusion loss",
+      "t-SNE loss"
+    ],
+    "better": "lower",
+    "precision": 3,
+    "models": [
+      [
+        "SmartGD[Stress]",
+        239.538,
+        29.871,
+        14.668,
+        80.167,
+        0.088,
+        213.843,
+        0.173
+      ],
+      [
+        "SmartGD[Xing]",
+        457.676,
+        17.802,
+        9.605,
+        76.287,
+        0.307,
+        279.879,
+        0.193
+      ],
+      [
+        "SmartGD[XAngle]",
+        470.719,
+        16.6,
+        7.732,
+        74.665,
+        0.333,
+        283.438,
+        0.196
+      ],
+      [
+        "SmartGD[Stress+Xing]",
+        243.24,
+        25.701,
+        12.13,
+        76.999,
+        0.093,
+        213.719,
+        0.17
+      ],
+      [
+        "SmartGD[Stress+XAngle]",
+        240.673,
+        28.492,
+        13.377,
+        79.222,
+        0.087,
+        213.143,
+        0.171
+      ],
+      [
+        "SmartGD[7-Aesthetics]",
+        250.106,
+        26.21,
+        11.937,
+        76.206,
+        0.075,
+        215.175,
+        0.167
+      ]
+    ],
+    "baselines": [
+      [
+        "DeepGD[Stress]",
+        245.427,
+        30.266,
+        15.243,
+        83.146,
+        0.103,
+        215.548,
+        0.176
+      ],
+      [
+        "FA2",
+        365.924,
+        25.261,
+        12.75,
+        73.854,
+        0.191,
+        257.386,
+        0.193
+      ],
+      [
+        "KK",
+        246.345,
+        30.249,
+        14.434,
+        79.724,
+        0.085,
+        215.052,
+        0.178
+      ],
+      [
+        "Neato",
+        251.931,
+        31.313,
+        15.085,
+        80.301,
+        0.087,
+        216.772,
+        0.181
+      ],
+      [
+        "PMDS",
+        372.06,
+        37.949,
+        23.826,
+        93.116,
+        0.213,
+        280.969,
+        0.246
+      ],
+      [
+        "sfdp",
+        303.998,
+        27.942,
+        14.244,
+        80.81,
+        0.09,
+        244.667,
+        0.194
+      ],
+      [
+        "SGD2",
+        240.448,
+        29.904,
+        14.451,
+        79.238,
+        0.082,
+        214.148,
+        0.174
+      ],
+      [
+        "spectral",
+        1014.444,
+        30.985,
+        26.285,
+        94.093,
+        0.394,
+        670.49,
+        0.374
+      ],
+      [
+        "spring",
+        387.312,
+        40.11,
+        21.063,
+        86.815,
+        0.11,
+        261.625,
+        0.247
+      ],
+      [
+        "GD2[Stress]",
+        250.365,
+        30.367,
+        14.522,
+        79.568,
+        0.083,
+        216.074,
+        0.178
+      ],
+      [
+        "GD2[Xing]",
+        1178.893,
+        24.721,
+        15.871,
+        110.035,
+        1.107,
+        547.826,
+        0.387
+      ],
+      [
+        "GD2[XAngle]",
+        1779.961,
+        870.353,
+        513.724,
+        180.753,
+        1.85,
+        978.306,
+        0.554
+      ],
+      [
+        "GD2[Stress+Xing]",
+        351.921,
+        18.126,
+        9.121,
+        83.56,
+        0.232,
+        236.949,
+        0.189
+      ],
+      [
+        "GD2[Stress+XAngle]",
+        1968.058,
+        316.954,
+        185.823,
+        146.982,
+        1.174,
+        1323.037,
+        0.359
+      ]
+    ],
+    "note": "Mean absolute criterion values on 1,000 held-out Rome graphs (10–100 nodes). Each SmartGD row is a separately trained model optimizing its named objective. The main quantitative table is labeled Figure 4 in the paper. XAngle and IAngle are minimization penalties, not raw angles where larger is better. Do not mix DeepGD standalone Table1 numbers with this experiment; the splits/settings differ.",
+    "spc_best_baselines": {
+      "source": "https://arxiv.org/pdf/2206.06434v3#page=8",
+      "table": "Figure 3 · p. 8",
+      "rows": [
+        [
+          "SmartGD[Stress]",
+          "Stress",
+          "SGD2",
+          -0.57
+        ],
+        [
+          "SmartGD[Shape]",
+          "Shape loss",
+          "FA2",
+          -21.37
+        ],
+        [
+          "SmartGD[Xing]",
+          "Edge crossings",
+          "GD2[Stress+Xing]",
+          -3.31
+        ],
+        [
+          "SmartGD[XAngle]",
+          "Crossing-angle loss",
+          "GD2[Stress+Xing]",
+          -20.05
+        ]
+      ],
+      "note": "Mean per-graph SPC (%), not percent changes computed from mean criterion values. Negative means better. Shape-based absolute values are absent from Figure4; use this explicit SPC comparison if displaying Shape."
+    }
+  }
+}

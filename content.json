@@ -1,0 +1,213 @@
+{
+  "name": "Xiaoqi Wang",
+  "role": "Staff Research Scientist",
+  "organization": "Bosch AI Research Center",
+  "location": "Sunnyvale, California",
+  "email": "xiaoqiwang2582@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/xiaoqiwang2582/",
+  "scholar": "https://scholar.google.com/citations?user=i__pLDEAAAAJ&hl=en",
+  "summary": "I’m a Staff Research Scientist at Bosch AI Research Center, enabling AI models to see, understand, and simulate the world around us. My research spans vision foundation models, HD map generation, generative world models, and spatial reasoning for vision-language models. As a technical lead, I also guide model development and collaborate with product teams to bring our research into autonomous driving and manufacturing applications.\n\nOutside of research, I enjoy dancing, playing board games, and spending time with my three cats and one dog!",
+  "research": [
+    {
+      "title": "HD Map Generation",
+      "bullets": [
+        "TopoEnhance: Introduced a lightweight framework that improves road-topology reliability to support robust path planning and decision-making. Increased SMART’s lane-connectivity score (TJS) from 38.1 to 87.7 on OpenLane-V2’s Argoverse2 subset without source-specific retraining.",
+        "MapMergeLLM: Led the development of an LLM-based framework that merges noisy local map predictions into coherent global HD maps for autonomous driving. Achieved average relative gains in road-boundary F1 of 23.1% on Argoverse2 and 21.9% on nuScenes over the strongest baseline, without detector-specific retraining."
+      ],
+      "industry": {
+        "title": "Production-scale HD Map Autolabelling",
+        "paragraphs": [
+          "Technical lead for HD map auto-labelling project spanning 10 million driving clips. Lead end-to-end model development, supported by full-time associates, and coordinate with product integration and data production teams to deliver models into production.",
+          "The pipeline generates preliminary labels that human labellers refine with minor adjustments, accelerating annotation and reducing manual effort. The production line has contributed to approximately €3 billion in human-labelling cost reductions."
+        ],
+        "highlights": [
+          "10 million",
+          "€3 billion"
+        ]
+      }
+    },
+    {
+      "title": "Vision Foundation Models for Scene Understandings",
+      "bullets": [
+        "USE [CVPR 2024]: Built an open-vocabulary segmentation framework that recognizes new object and part categories from free-form text descriptions. Designed an auto-labelling pipeline to curate millions of segment-text pairs and trained a vision-language model through contrastive learning to produce universal segment embeddings, enabling zero-shot segmentation and text-based region retrieval. Achieved 37.0% mIoU on ADE20K-150, a 25% relative improvement over OVSeg.",
+        "ProSAM [ICCV 2025]: Developed a robust in-context segmentation model that uses a single annotated reference image to segment similar objects in new images, reducing repeated manual prompting. Introduced probabilistic prompts to stabilize SAM’s predictions and improve generalization to unseen object categories. Achieved 54.63% mIoU on COCO-20i and 72.04% on PASCAL-5i, consistently outperforming VRP-SAM across point, scribble, box, and mask references."
+      ],
+      "industry": {
+        "title": "Vision Foundation Models for Scene Understandings",
+        "paragraphs": [
+          "Own end-to-end model development for open-vocabulary and in-context segmentation, partnering with product integration teams to deploy vision foundation models in Bosch’s autonomous driving and manufacturing products.",
+          "USE enables open-vocabulary data mining for autonomous driving, helping teams identify driving scenes of interest through natural-language queries. ProSAM uses visual examples to automatically label scratches, irregular shapes, and other defects, helping manufacturing plants reduce manual annotation effort. Together, these models bring research advances into production workflows for driving-scene discovery and defect autolabelling."
+        ],
+        "highlights": []
+      }
+    },
+    {
+      "title": "World Model and 3D Spatial Reasoning",
+      "bullets": [
+        "SpatialMind: Led research that extends vision-language models from understanding observed scenes to predicting future spatial relationships, supporting proactive decision-making in dynamic environments. Outperformed GPT-6-Astra (medium) on SpatialMind-2K, achieving 63.4% higher accuracy in future-direction prediction and 23.3% higher accuracy in future spatial-relation prediction.",
+        "ReactDrive: Led research on a self-reactive world model that simulates how surrounding traffic responds to ego-vehicle actions, generating more realistic interactions in driving videos. Compared with Cosmos 3, ReactDrive reduced detected traffic-overlap rates by 44.7% on Waymo and 83.0% on nuPlan. Augmenting planner training data with our generated videos improved TransFuser’s NAVSIM planning score (PDMS) from 83.8 to 85.1."
+      ]
+    }
+  ],
+  "graduate": [
+    "GNNInterpreter [ICLR 2023]: Designed a probabilistic generative framework that reveals the graph patterns leading GNN predictions, helping diagnose learned biases and failure modes. Generated model-level explanations without hand-crafted domain rules by GNNInterpreter, achieving over 10× faster explanation generation than XGNN on MUTAG. Uncovered misleading learned patterns in a GNN with 99.64% test accuracy on the Motif dataset.",
+    "GNNBoundary [ICLR 2024]: Introduced a model-level explainability framework that reveals where GNNs become uncertain between classes, supporting assessment of misclassification risk, robustness, and generalization. Designed an adaptive objective to generate graphs near decision boundaries and analyze boundary margin, thickness, and complexity. Achieved up to 3× the success rate of a cross-entropy baseline in generating near-boundary graphs on ENZYMES.",
+    "DeepGD [IEEE CG&A 2021]: Designed a GNN framework that generates readable layouts for unseen graphs without retraining. Outperformed Graphviz across four jointly optimized layout criteria on 1,000 test graphs.",
+    "SmartGD [IEEE TVCG 2024]: Introduced a conditional GAN framework for graph visualization that optimizes diverse aesthetic goals, including nondifferentiable criteria such as edge crossings. Designed self-challenging training that progressively learns from better self-generated layouts, improving beyond the initial reference examples. Supported joint optimization of seven layout criteria and achieved the best average crossing-angle and shape scores among evaluated baselines."
+  ],
+  "yahoo": "Developed a self-supervised GNN model that learns webpage representations without crawling page content, supporting content understanding and user profiling for advertising and recommendation systems. Improved performance by at least 20% over the production model across three downstream tasks: webpage classification, gender classification, and age prediction.",
+  "publications": [
+    {
+      "id": "reactdrive",
+      "authors": "Yifan Wang, Xiaoqi Wang, Cho-Ying Wu, Wenbin He, Chenyu You, Liu Ren",
+      "title": "ReactDrive: Self-Reactive World Model for Autonomous Driving",
+      "venue": "Submitted to CVPR 2027",
+      "url": null,
+      "category": "World models",
+      "group": "selected"
+    },
+    {
+      "id": "topoenhance",
+      "authors": "Xiaoqi Wang, Dingyi Zhuang, David Paz, Wenbin He, Yucai Bai, Peng Zhou, Rui Zhang, Jinhua Zhao, Liu Ren",
+      "title": "Refine Connections, Close the Gap: A Reliable Enhancement Framework for Driving Scene Topology",
+      "venue": "Submitted to ICLR 2027",
+      "url": "https://arxiv.org/abs/2610.11058",
+      "category": "HD maps",
+      "group": "selected"
+    },
+    {
+      "id": "mapmergellm",
+      "authors": "Ziwei Li, Yi-Tang Chen, Xiaoqi Wang, Wenbin He, Han-Wei Shen, Liu Ren",
+      "title": "From Fragments to Global Maps: Learning Vectorized Map Aggregation with Large Language Models",
+      "venue": "Submitted to ICLR 2027",
+      "url": "https://arxiv.org/abs/2610.02513",
+      "category": "HD maps",
+      "group": "selected"
+    },
+    {
+      "id": "spatialmind",
+      "authors": "Feiran Wang, Xiaoqi Wang, Ziwei Li, Wenbin He, Yan Yan, Liu Ren",
+      "title": "From Sight to Foresight: Predictive Spatial Reasoning in Vision-Language Models",
+      "venue": "Submitted to ICLR 2027",
+      "url": "https://arxiv.org/abs/2610.04139",
+      "category": "World models",
+      "group": "selected"
+    },
+    {
+      "id": "prosam",
+      "authors": "Xiaoqi Wang, Clint Sebastian, Wenbin He, Liu Ren",
+      "title": "ProSAM: Enhancing the Robustness of SAM-based Visual Reference Segmentation with Probabilistic Prompts",
+      "venue": "ICCV 2025",
+      "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Wang_ProSAM_Enhancing_the_Robustness_of_SAM-based_Visual_Reference_Segmentation_with_ICCV_2025_paper.html",
+      "category": "Vision",
+      "group": "selected"
+    },
+    {
+      "id": "use",
+      "authors": "Xiaoqi Wang, Wenbin He, Xiwei Xuan, Clint Sebastian, Jorge Piazentin Ono, Xin Li, Sima Behpour, Thang Doan, Liang Gou, Han-Wei Shen, Liu Ren",
+      "title": "USE: Universal Segment Embeddings for Open-Vocabulary Image Segmentation",
+      "venue": "CVPR 2024",
+      "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Wang_USE_Universal_Segment_Embeddings_for_Open-Vocabulary_Image_Segmentation_CVPR_2024_paper.html",
+      "category": "Vision",
+      "group": "selected"
+    },
+    {
+      "id": "gnnboundary",
+      "authors": "Xiaoqi Wang, Han-Wei Shen",
+      "title": "GNNBoundary: Towards Explaining Graph Neural Networks Through the Lens of Decision Boundaries",
+      "venue": "ICLR 2024",
+      "url": "https://openreview.net/forum?id=WIzzXCVYiH",
+      "category": "GNNs",
+      "group": "selected"
+    },
+    {
+      "id": "smartgd",
+      "authors": "Xiaoqi Wang, Kevin Yen, Yifan Hu, Han-Wei Shen",
+      "title": "SmartGD: A GAN-Based Graph Drawing Framework for Diverse Aesthetic Goals",
+      "venue": "IEEE Transactions on Visualization and Computer Graphics, 2024",
+      "url": "https://doi.org/10.1109/TVCG.2023.3306356",
+      "category": "Visualization",
+      "group": "selected"
+    },
+    {
+      "id": "gnninterpreter",
+      "authors": "Xiaoqi Wang, Han-Wei Shen",
+      "title": "GNNInterpreter: A Probabilistic Generative Model-Level Explanation for Graph Neural Networks",
+      "venue": "ICLR 2023",
+      "url": "https://openreview.net/forum?id=rqq6Dh8t4d",
+      "category": "GNNs",
+      "group": "selected"
+    },
+    {
+      "id": "deepgd",
+      "authors": "Xiaoqi Wang, Kevin Yen, Yifan Hu, Han-Wei Shen",
+      "title": "DeepGD: A Deep Learning Framework for Graph Drawing Using GNN",
+      "venue": "IEEE Computer Graphics and Applications, 2021",
+      "url": "https://doi.org/10.1109/MCG.2021.3093908",
+      "category": "Visualization",
+      "group": "selected"
+    },
+    {
+      "id": "beauty",
+      "authors": "Xuefeng Li, Peng Zhang, Xiaoqi Wang, Han-Wei Shen, Yifan Hu",
+      "title": "Beauty in the Eye of AI: Aligning LLMs and Vision Models with Human Aesthetics in Network Visualization",
+      "venue": "Computer Graphics Forum / EuroVis, 2026",
+      "url": "https://doi.org/10.1111/cgf.70456",
+      "category": "Visualization",
+      "group": "other"
+    },
+    {
+      "id": "vista",
+      "authors": "Xiwei Xuan, Xiaoqi Wang, Wenbin He, Jorge Piazentin Ono, Liang Gou, Kwan-Liu Ma, Liu Ren",
+      "title": "VISTA: A Visual Analytics Framework to Enhance Foundation Model-Generated Data Labels",
+      "venue": "IEEE Transactions on Visualization and Computer Graphics, 31(10), 6991–7003, 2025",
+      "url": "https://doi.org/10.1109/TVCG.2025.3535896",
+      "category": "Vision",
+      "group": "other"
+    },
+    {
+      "id": "fedne",
+      "authors": "Ziwei Li, Xiaoqi Wang, Hong-You Chen, Han-Wei Shen, Wei-Lun Chao",
+      "title": "FedNE: Surrogate-Assisted Federated Neighbor Embedding for Dimensionality Reduction",
+      "venue": "Advances in Neural Information Processing Systems (NeurIPS), 2024",
+      "url": "https://papers.nips.cc/paper_files/paper/2024/hash/f1c131d41c3d5119a8de329140b3384e-Abstract-Conference.html",
+      "category": "Visualization",
+      "group": "other"
+    },
+    {
+      "id": "foodsheds",
+      "authors": "Yamei Tu, Xiaoqi Wang, Rui Qiu, et al",
+      "title": "An Interactive Knowledge and Learning Environment in Smart Foodsheds",
+      "venue": "IEEE Computer Graphics and Applications, 43(3), 36–47, 2023",
+      "url": "https://doi.org/10.1109/MCG.2023.3263960",
+      "category": "Visualization",
+      "group": "other"
+    }
+  ],
+  "pets": [
+    {
+      "src": "/assets/pets/cream-dog.webp?v=20261101-2",
+      "alt": "Cream-colored dog looking up with its front paws on a white cushion",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "src": "/assets/pets/golden-cat.webp",
+      "alt": "Golden cat standing on a white table",
+      "width": 1050,
+      "height": 1400
+    },
+    {
+      "src": "/assets/pets/silver-cat.webp",
+      "alt": "Silver cat resting in a yellow bed",
+      "width": 1050,
+      "height": 1400
+    },
+    {
+      "src": "/assets/pets/orange-white-cat.webp",
+      "alt": "Orange-and-white cat resting on a bed",
+      "width": 1050,
+      "height": 1400
+    }
+  ]
+}
