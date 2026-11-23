@@ -60,9 +60,9 @@
     {
       "id": "reactdrive",
       "authors": "Yifan Wang, Xiaoqi Wang, Cho-Ying Wu, Wenbin He, Chenyu You, Liu Ren",
-      "title": "ReactDrive: Self-Reactive World Model for Autonomous Driving",
-      "venue": "Submitted to CVPR 2027",
-      "url": null,
+      "title": "ReactDrive: Self-Reactive Driving World Model",
+      "venue": "arXiv, 2026 · Submitted to CVPR 2027",
+      "url": "https://arxiv.org/abs/2611.27024",
       "category": "World models",
       "group": "selected"
     },

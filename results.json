@@ -542,9 +542,9 @@
     ]
   },
   "reactdrive": {
-    "source": null,
-    "table": "Submitted manuscript · Table 1 · p. 6",
-    "note": "500 evaluation clips per dataset. Traffic overlap is the detector-based CR proxy, not a physical collision rate. Overall edited-trajectory results average five maneuvers equally. Agent errors use normalized image coordinates under recorded ego trajectories; ego errors assess adherence to edited trajectories. Values are from the supplied CVPR 2027 submission.",
+    "source": "https://arxiv.org/pdf/2611.27024#page=6",
+    "table": "Table 1 · p. 6",
+    "note": "100 test scenes per dataset, each evaluated with five ego maneuvers (500 videos per model). Traffic overlap is the detector-based CR proxy, not a physical collision rate. Overall edited-trajectory results weight the five maneuvers equally. Agent errors use normalized image coordinates under recorded ego trajectories; ego errors assess adherence to edited trajectories. Source: arXiv:2611.27024, Table 1.",
     "columns": [
       "Traffic overlap",
       "Video FVD",
